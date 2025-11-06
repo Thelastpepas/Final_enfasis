@@ -60,12 +60,7 @@ def normalizar_minusculas_sin_tildes(texto: str) -> str:
     return t
 
 def lematizar_filtrar(texto: str):
-    """
-    - Minúsculas y sin tildes
-    - Lematiza con spaCy
-    - Deja solo tokens alfabéticos
-    - Elimina stopwords y tokens cortos (<=2)
-    """
+  
     texto = normalizar_minusculas_sin_tildes(str(texto))
     doc = nlp(texto)
     tokens = [
